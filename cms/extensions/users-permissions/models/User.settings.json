@@ -53,9 +53,9 @@
       "plugin": "users-permissions",
       "configurable": false
     },
-    "blogs": {
+    "articles": {
       "via": "user",
-      "collection": "blog"
+      "collection": "article"
     }
   }
 }
