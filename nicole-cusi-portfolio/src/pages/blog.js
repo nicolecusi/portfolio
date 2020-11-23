@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import Layout from '../components/layout'
 
-const IndexPage = ({ data }) => (
+const BlogPage = ({ data }) => (
   <Layout>
     <h1>Hi people</h1>
     <p>Welcome to your new Gatsby site.</p>
@@ -13,6 +14,7 @@ const IndexPage = ({ data }) => (
           <h2>
             <Link to={`/${document.node.id}`}>{document.node.title}</Link>
           </h2>
+          <Img fixed={document.node.image.childImageSharp.fixed}/>
           <p>{document.node.content}</p>
         </li>
       ))}
@@ -21,4 +23,25 @@ const IndexPage = ({ data }) => (
   </Layout>
 )
 
-export default IndexPage
+export default BlogPage
+
+export const pageQuery = graphql`  
+  query BlogQuery {
+    allStrapiArticle {
+      edges {
+        node {
+          id
+          image {
+            childImageSharp {
+              fixed(width: 200, height: 125) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
+          title
+          content
+        }
+      }
+    }
+  }
+`
