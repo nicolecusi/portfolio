@@ -3,16 +3,10 @@
 
 // Importing Bulma from node_modules
 @import '~bulma/bulma.sass';
+@import '~pattern.css/pattern.scss';
 
-.gradientBg {
-	display: flex;
-	background: linear-gradient(to right, $primary-color, $secondary-color);
-}
-
-.center {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+.maya-blue {
+  color: $maya-blue;
 }
 
 .footer {
@@ -24,6 +18,8 @@
 		color: black;
 	}
 	a:hover {
-		color: $secondary-color;
+
 	}
 }
+
+
