@@ -4,13 +4,13 @@ import Layout from '../components/Layout/Layout';
 import Portfolio from '../components/Portfolio/Portfolio';
 import { graphql } from "gatsby";
 
-export const query = graphql `
-  query {
-    homepage {
-      about
-    }
-  }
-`;
+// export const query = graphql `
+//   query {
+//     homepage {
+//       about
+//     }
+//   }
+// `;
 
 const IndexPage = ({data}) => {
   
