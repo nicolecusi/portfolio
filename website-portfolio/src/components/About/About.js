@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../style.scss';
 
-const About = () => (
+const About = ({props}) => (
   <section className="section">
     <div className="container">
       <div className="columns">
@@ -13,7 +13,7 @@ const About = () => (
           <div className="content">
             <h2 className="title is-2">About me</h2>
             <p className="is-medium">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Non pulvinar neque laoreet suspendisse interdum consectetur libero. Ac ut consequat semper viverra nam. Vitae congue eu consequat ac felis donec et odio pellentesque. Vitae justo eget magna fermentum iaculis eu non diam. 
+              {props.content}
             </p>
           </div>
         </div>
