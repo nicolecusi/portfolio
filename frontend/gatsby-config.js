@@ -7,7 +7,7 @@ module.exports = {
     keywords: `Web developer, Web, Developer, CSS, HTML, JS, Javascript, Gatsby, Bulma Developer, CSS3, HTML5, Seo, Starter`,
     gatsby: "https://www.gatsbyjs.org/",
     bulma: "https://bulma.io/",
-    siteUrl: `https://www.example.com`,
+    siteUrl: `https://nicolecusi.com`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -29,12 +29,6 @@ module.exports = {
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
-    {
-      resolve: "gatsby-plugin-apollo",
-      options: {
-        uri: "https://example.com/graphql",
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -61,5 +55,14 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.app/offline
     // 'gatsby-plugin-offline',
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
   ],
 };

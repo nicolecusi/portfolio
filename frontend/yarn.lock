@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@apollo/client@^3.0.0", "@apollo/client@^3.2.9":
+"@apollo/client@^3.0.0":
   "integrity" "sha512-AUvYITKhJNfRNU/Cf8t/N628ADdVah1+l9Qtjd09IwScRfDGvbBTkHMAgcb6hl7vuBVqGwQRq6fPKzHgWRlisg=="
   "resolved" "https://registry.npmjs.org/@apollo/client/-/client-3.2.9.tgz"
   "version" "3.2.9"
@@ -8362,6 +8362,14 @@
     "semver" "^5.7.1"
     "sharp" "^0.25.1"
 
+"gatsby-plugin-nprogress@^2.6.0":
+  "integrity" "sha512-yJ3O2o0/m2VeLnl9+UZm1dM7r3fQD15nazF3waNcM3QqqVIwK73JwMuGdrBSdBIRZaIvHqk0sEdzNCb1QOAeqg=="
+  "resolved" "https://registry.npmjs.org/gatsby-plugin-nprogress/-/gatsby-plugin-nprogress-2.6.0.tgz"
+  "version" "2.6.0"
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    "nprogress" "^0.2.0"
+
 "gatsby-plugin-offline@^3.2.17":
   "integrity" "sha512-+jy7dmK1S1PcjowkWlCRcxP6YL1kcCPxuH5hNrMC16k1eC8Wf5F4menc1yfCiixdoQzL+WOIY9Z7hhB1hE2nDA=="
   "resolved" "https://registry.yarnpkg.com/gatsby-plugin-offline/-/gatsby-plugin-offline-3.2.17.tgz"
@@ -12974,6 +12982,11 @@
     "ansi" "~0.3.1"
     "are-we-there-yet" "~1.1.2"
     "gauge" "~1.2.5"
+
+"nprogress@^0.2.0":
+  "integrity" "sha1-y480xTIT2JVyP8urkH6UIq28r7E="
+  "resolved" "https://registry.npmjs.org/nprogress/-/nprogress-0.2.0.tgz"
+  "version" "0.2.0"
 
 "nth-check@^1.0.2", "nth-check@~1.0.1":
   "integrity" "sha512-WeBOdju8SnzPN5vTUJYxYUxLeXpCaVP5i5e0LF8fg7WORF2Wd7wFX/pk0tYZk7s8T+J7VLy0Da6J1+wCT0AtHg=="

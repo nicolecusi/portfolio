@@ -1,25 +1,24 @@
 // Importing variables
-@import './variables.scss';
+@import "./variables.scss";
 
 // Importing Bulma from node_modules
-@import '~bulma/bulma.sass';
-@import '~pattern.css/pattern.scss';
+@import "~bulma/bulma.sass";
+@import "~pattern.css/pattern.scss";
 
 .maya-blue {
   color: $maya-blue;
 }
 
 .footer {
-	display: flex;
-	padding: 1.5rem 1.5rem;
-	line-height: 1.5rem;
-	a {
-		border-bottom: 1px solid;
-		color: black;
-	}
-	a:hover {
-
-	}
+  display: flex;
+  padding: 1.5rem 1.5rem;
+  line-height: 1.5rem;
+  a {
+    border-bottom: 1px solid;
+    color: black;
+  }
 }
 
-
+.blob {
+  animation: rotation 8s infinite linear;
+}
