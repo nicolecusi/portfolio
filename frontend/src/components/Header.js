@@ -1,34 +1,47 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { StaticQuery, graphql } from "gatsby";
 
 import "./style.scss";
 
-import Navbar from "./Navbar";
-import CaptionTag from "./CaptionTag";
+import PageTitle from "../components/PageTitle";
+import Subtitle from "./Subtitle";
+import Button from "./Button";
 
-const Header = () => (
-  <section className="hero is-medium pattern-cross-dots-lg maya-blue">
-    <div className="hero-body">
-      <div className="container">
-        <div className="content">
-          <CaptionTag caption="Based in Toronto, Ontario" styleName="is-link" />
-          <h1 className="title mt-3 is-1">Hi there, my name is Nicole Cusi</h1>
-          <h3 className="subtitle is-3">
-            and I am a web designer &amp; developer
-          </h3>
-        </div>
-        <div className="buttons my-5">
-          <button className="button is-primary">Contact me</button>
-          <button className="button is-link is-light">
-            <FaGithub />
-          </button>
-          <button className="button is-link is-light">
-            <FaLinkedin />
-          </button>
-        </div>
-      </div>
-    </div>
-  </section>
-);
-
-export default Header;
+export default function Header() {
+  return (
+    <StaticQuery
+      query={graphql`
+        query HeadingQuery {
+          strapiHomepage {
+            pageTitle {
+              title
+              description
+            }
+          }
+        }
+      `}
+      render={(data) => (
+        <section className="hero section is-medium">
+          <div className="hero-body">
+            <div className="container">
+              <div className="content">
+                <PageTitle title={data.strapiHomepage.pageTitle.title} />
+                <Subtitle text={data.strapiHomepage.pageTitle.description} />
+              </div>
+              <div className="buttons my-5">
+                <Button classes="is-primary" text="Contact me" />
+                <button className="button is-link is-light">
+                  <FaGithub />
+                </button>
+                <button className="button is-link is-light">
+                  <FaLinkedin />
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+    />
+  );
+}
